@@ -281,6 +281,7 @@ body {
     color: white;
     position: relative;
     overflow: hidden;
+    padding: 8px; /* Space for border effect */
 }
 
 .profile-avatar::before {
@@ -292,6 +293,16 @@ body {
     height: 200%;
     background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
     animation: shine 3s infinite;
+    z-index: 1;
+}
+
+.profile-image {
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
 }
 
 .floating-elements {
