@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credly Badge Test</title>
+</head>
+<body>
+    <h1>Testing Credly Badge</h1>
+    
+    <!-- Test 1: Original embed code -->
+    <h2>Test 1: Original Embed</h2>
+    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="b9315cc1-1522-4ceb-97ae-7c6b00d2eb7d" data-share-badge-host="https://www.credly.com"></div>
+    <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+    
+    <!-- Test 2: Alternative approach -->
+    <h2>Test 2: Alternative</h2>
+    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="b9315cc1-1522-4ceb-97ae-7c6b00d2eb7d" data-share-badge-host="https://www.credly.com"></div>
+    <script type="text/javascript" async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
+    
+    <!-- Test 3: Direct iframe -->
+    <h2>Test 3: Direct iframe</h2>
+    <iframe src="https://www.credly.com/badges/b9315cc1-1522-4ceb-97ae-7c6b00d2eb7d/public_url" width="150" height="270" frameborder="0"></iframe>
+    
+    <script>
+        // Debug script to check if Credly script loads
+        console.log('Testing Credly badge...');
+        
+        // Check if script loaded
+        setTimeout(() => {
+            if (typeof window.Credly !== 'undefined') {
+                console.log('Credly script loaded successfully');
+            } else {
+                console.log('Credly script failed to load');
+            }
+        }, 2000);
+    </script>
+</body>
+</html>

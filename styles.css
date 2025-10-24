@@ -24,6 +24,30 @@
     --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
 }
 
+/* Dark mode variables */
+[data-theme="dark"] {
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-light: #94a3b8;
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-dark: #020617;
+    --border-color: #334155;
+    --shadow-light: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+    --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    --shadow-large: 0 20px 25px -5px rgba(0, 0, 0, 0.3);    
+    --hero-background-dark: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    --primary-color-dark: #667eea;
+    --secondary-color-dark: #1e40af;
+    --accent-color-dark: #f59e0b;
+    --text-primary-dark: #f8fafc;
+    --text-secondary-dark: #cbd5e1;
+    --text-light-dark: #94a3b8;
+    --bg-primary-dark: #0f172a;
+    --bg-secondary-dark: #1e293b;
+    --bg-dark-dark: #020617;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -41,6 +65,49 @@ body {
     padding: 0 20px;
 }
 
+/* Theme Toggle */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+    .theme-toggle {
+        margin-left: 10px;
+    }
+    
+    .theme-toggle-btn {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+.theme-toggle-btn {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--text-primary);
+}
+
+.theme-toggle-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: scale(1.1);
+}
+
+.theme-toggle-btn i {
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
 /* Navigation */
 .navbar {
     position: fixed;
@@ -51,6 +118,10 @@ body {
     border-bottom: 1px solid var(--border-color);
     z-index: 1000;
     transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .navbar {
+    background: rgba(15, 23, 42, 0.95);
 }
 
 .nav-container {

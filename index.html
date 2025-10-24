@@ -23,6 +23,11 @@
                 <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
             <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -73,6 +78,9 @@
                             <div class="floating-icon" style="--delay: 2s">
                                 <i class="fab fa-react"></i>
                             </div>
+                            <div class="floating-icon" style="--delay: 2s">
+                                <i class="fab fa-aws"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -112,10 +120,16 @@
                         <div class="certifications">
                             <h3><i class="fas fa-certificate"></i> Certifications</h3>
                             <ul>
+                                <li><strong>AWS Certified Cloud Practitioner (CCP)</strong> - AWS reStart</li>
                                 <li>Cyber Security Associate - Moringa School</li>
                                 <li>Professional Development Skills - ALX</li>
                                 <li>Back-End Development - ALX</li>
                             </ul>
+                        </div>
+                        <div class="certification-badge">
+                            <!-- Credly Badge Embed -->
+                            <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="b9315cc1-1522-4ceb-97ae-7c6b00d2eb7d" data-share-badge-host="https://www.credly.com"></div>
+                            <script type="text/javascript" async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
                         </div>
                     </div>
                 </div>
@@ -151,6 +165,18 @@
                     <div class="skill-items">
                         <span class="skill-tag">MySQL</span>
                         <span class="skill-tag">PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fab fa-aws"></i> Cloud & AWS Services</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">AWS CCP Certified</span>
+                        <span class="skill-tag">S3 Storage</span>
+                        <span class="skill-tag">EC2 Instances</span>
+                        <span class="skill-tag">IAM Security</span>
+                        <span class="skill-tag">Cost Explorer</span>
+                        <span class="skill-tag">Lambda Functions</span>
+                        <span class="skill-tag">SageMaker ML</span>
                     </div>
                 </div>
                 <div class="skill-category">
@@ -233,6 +259,27 @@
 
                 <div class="project-card">
                     <div class="project-header">
+                        <h3>Food Order JTown</h3>
+                        <a href="https://github.com/42ndLight/food_order_JTown" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                    <p class="project-description">
+                        Full-stack e-commerce platform for a burger stand featuring menu browsing, 
+                        cart management, MPESA payments, and loyalty points. Built with Django and 
+                        deployed on AWS with PostgreSQL, S3 storage, and real-time notifications.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Daraja API</span>
+                        <span class="tech-tag">S3</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
                         <h3>AppElaunda</h3>
                         <a href="https://github.com/Leicht4422/appElaunda.git" target="_blank" class="project-link">
                             <i class="fab fa-github"></i>
@@ -258,6 +305,19 @@
         <div class="container">
             <h2 class="section-title">Work Experience</h2>
             <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Freelance Developer</h3>
+                        <span class="company">Self-Employed</span>
+                        <span class="duration">April 2025 - Present</span>
+                        <ul class="responsibilities">
+                            <li>Developed and delivered Food Order JTown e-commerce platform with MPESA integration and AWS deployment</li>
+                            <li>Built Poatan Chama Management System with round-robin payout algorithms for community savings groups</li>
+                            <li>Specialized in Django web applications, AWS cloud services, and mobile payment integrations</li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
@@ -364,6 +424,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
