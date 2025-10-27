@@ -27,26 +27,23 @@
 /* Dark mode variables */
 [data-theme="dark"] {
     --text-primary: #f8fafc;
-    --text-secondary: #cbd5e1;
+    --text-secondary: #f2f5f8;
     --text-light: #94a3b8;
     --bg-primary: #0f172a;
     --bg-secondary: #1e293b;
     --bg-dark: #020617;
     --border-color: #334155;
-    --shadow-light: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
-    --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-    --shadow-large: 0 20px 25px -5px rgba(0, 0, 0, 0.3);    
+    --shadow-light: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
+    --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+    --shadow-large: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+    --primary-color: #5386E4;
+    --secondary-color: #3b82f6;
+    --accent-color: #fbbf24;
+    --gradient-primary: linear-gradient(135deg, #2b25ebe5 0%, #60a5fa 100%);
+    --gradient-secondary: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    --gradient-accent: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
     --hero-background-dark: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    --primary-color-dark: #667eea;
-    --secondary-color-dark: #1e40af;
-    --accent-color-dark: #f59e0b;
-    --text-primary-dark: #f8fafc;
-    --text-secondary-dark: #cbd5e1;
-    --text-light-dark: #94a3b8;
-    --bg-primary-dark: #0f172a;
-    --bg-secondary-dark: #1e293b;
-    --bg-dark-dark: #020617;
-}
+  }
 
 html {
     scroll-behavior: smooth;
@@ -107,6 +104,7 @@ body {
     font-size: 16px;
     transition: transform 0.3s ease;
 }
+
 
 /* Navigation */
 .navbar {
@@ -203,6 +201,9 @@ body {
     position: relative;
     overflow: hidden;
 }
+[data-theme="dark"] .hero {
+    background: var(--hero-background-dark);
+}
 
 .hero::before {
     content: '';
@@ -228,6 +229,12 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
+}
+
+.hero-content > * {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
 }
 
 .hero-greeting {
@@ -478,7 +485,7 @@ section {
 .edu-item {
     margin-bottom: 1rem;
     padding: 1rem;
-    background: white;
+    background: var(--bg-secondary);
     border-radius: 8px;
     box-shadow: var(--shadow-light);
 }
@@ -500,11 +507,19 @@ section {
 .certifications li {
     margin-bottom: 0.5rem;
     padding: 0.8rem;
-    background: white;
+    background: var(--bg-secondary);
     border-radius: 8px;
     box-shadow: var(--shadow-light);
     color: var(--text-secondary);
 }
+.certification-badge {
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    box-shadow: var(--shadow-dark);
+    padding: 1rem;
+}
+
+
 
 /* Skills Section */
 .skills-grid {
@@ -514,7 +529,7 @@ section {
 }
 
 .skill-category {
-    background: white;
+    background: var(--bg-secondary);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: var(--shadow-medium);
@@ -537,7 +552,10 @@ section {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+
 }
+
+
 
 .skill-tag {
     background: var(--gradient-primary);
@@ -560,7 +578,7 @@ section {
 }
 
 .project-card {
-    background: white;
+    background: var(--bg-secondary);
     border-radius: 12px;
     padding: 2rem;
     box-shadow: var(--shadow-medium);
@@ -678,7 +696,7 @@ section {
 
 .timeline-content {
     width: 45%;
-    background: white;
+    background: var(--bg-secondary);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: var(--shadow-medium);
@@ -925,7 +943,7 @@ section {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background-color: rgba(255, 255, 255, 0.95);
+        background-color: var(--bg-secondary);
         backdrop-filter: blur(10px);
         width: 100%;
         text-align: center;
@@ -1073,3 +1091,4 @@ section {
         padding: 1.5rem;
     }
 }
+
